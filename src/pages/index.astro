@@ -1,32 +1,86 @@
 ---
-import ChargeSection from "../components/ChargeSection.astro";
-import HeroSection from "../components/HeroSection.astro";
 import LandingHeader from "../components/LandingHeader.astro";
+import Section from "../components/Section.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Tesla landing page mockup">
-	<LandingHeader/>
+	<LandingHeader />
 
-	<main class="snap-y snap-mandatory relative w-full h-screen overflow-y-auto overflow-x-hidden">
+	<main
+		class="snap-y snap-mandatory relative w-full h-screen overflow-y-auto overflow-x-hidden"
+	>
+
 		<div class="snap-center">
-			<HeroSection/>
+			<Section
+				title="Disfrute de Tesla"
+				subtitle="Programe una prueba de conducción hoy mismo"
+				color="white"
+				>
+				<div slot="footer">
+					<a
+						class="border-[3px] border-white text-sm rounded font-medium text-white px-12 py-2 hover:bg-white hover:text-black transition-colors"
+						href="#">Prueba de conducción</a>
+				</div>
+				<video slot="background" autoplay muted loop class="absolute top-0 w-screen h-screen object-fill" src="/video.webm"/>
+			</Section>
 		</div>
+
 		<div class="snap-center">
-			<ChargeSection/>
+			<Section
+				title="Model Y"
+				subtitle="Concertar una prueba de conducción"
+				color="black"
+				>
+				<div slot="footer" class="gap-x-6 flex mx-auto">
+					<a
+						class="bg-white text-sm rounded font-medium text-black px-12 py-2"
+						href="#">Explorar inventario</a
+					>
+					<a
+						class="bg-gray-600 text-sm rounded font-medium text-white px-12 py-2"
+						href="#">Pedido personalizado</a
+					>
+				</div>
+				<img slot="background" src="/model-y.webp" alt="Model y" class="absolute top-0 w-screen h-screen object-cover">
+			</Section>
 		</div>
+
 		<div class="snap-center">
-			<HeroSection/>
+			<Section
+				title="Disfrute de Tesla"
+				subtitle="Programe una prueba de conducción hoy mismo"
+				color="white"
+				>
+				<div slot="footer">
+					<a
+						class="border-[3px] border-white text-sm rounded font-medium text-white px-12 py-2 hover:bg-white hover:text-black transition-colors"
+						href="#">Prueba de conducción</a>
+				</div>
+				<video slot="background" autoplay muted loop class="absolute top-0 w-screen h-screen object-fill" src="/video.webm"/>
+			</Section>
 		</div>
+
 		<div class="snap-center">
-			<ChargeSection/>
+			<Section
+				title="Model Y"
+				subtitle="Concertar una prueba de conducción"
+				color="black"
+				>
+				<div slot="footer" class="gap-x-6 flex mx-auto">
+					<a
+						class="bg-white text-sm rounded font-medium text-black px-12 py-2"
+						href="#">Explorar inventario</a
+					>
+					<a
+						class="bg-gray-600 text-sm rounded font-medium text-white px-12 py-2"
+						href="#">Pedido personalizado</a
+					>
+				</div>
+				<img slot="background" src="/model-y.webp" alt="Model y" class="absolute top-0 w-screen h-screen object-cover">
+			</Section>
 		</div>
-		<div class="snap-center">
-			<HeroSection/>
-		</div>
-		<div class="snap-center">
-			<ChargeSection/>
-		</div>
+
 	</main>
 </Layout>
 
